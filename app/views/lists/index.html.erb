@@ -1,0 +1,19 @@
+<div class="banner">
+  <div class="container">
+    <h1>Lists</h1>
+  </div>
+</div>
+
+<div class="container">
+  <button><%= link_to "Add a list", new_list_path %></button>
+  <h2>My list</h2>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%=link_to list_path(list) do %>
+          <div class="card-category">
+            <%= list.name%>
+          </div>
+      <%end%>
+    <% end %>
+  </div>
+</div>

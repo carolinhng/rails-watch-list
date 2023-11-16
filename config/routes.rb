@@ -7,4 +7,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :lists, only: [:index, :show, :new, :create] do
+    resources :bookmarks, only: [:new, :create]
+  end
+
+  resources :bookmarks, only: [:destroy]
+
+  # Voici les actions utilisateur que nous voulons implémenter dans notre application :
+  # En tant qu’utilisateur, je peux voir toutes mes listes de films.
+  # En tant qu’utilisateur, je peux créer une liste de films.
+  # En tant qu’utilisateur, je peux voir les détails d’une liste de films.
+  # En tant qu’utilisateur, je peux marquer (bookmark) un film dans une liste de films.
+  # En tant qu’utilisateur, je peux détruire un bookmark.
 end

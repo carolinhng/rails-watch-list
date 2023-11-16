@@ -10,3 +10,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// @import "@popperjs/core";
+
+
+.container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

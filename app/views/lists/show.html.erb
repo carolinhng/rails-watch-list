@@ -1,0 +1,22 @@
+<h1><%= @list.name %></h1>
+
+
+<button><%= link_to "Add a movie", new_list_bookmark_path(@list) %></button>
+
+<div class="container">
+  <div class="cards">
+    <% @list.movies.each do | movie |  %>
+      <div class="card-trip">
+        <%= image_tag movie.poster_url %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+            <%# <p><%= movie.bookmarks.comments %>
+            <%= link_to "Delete",  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
