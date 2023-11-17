@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :bookmarks, only: [:destroy]
 
+
   # Voici les actions utilisateur que nous voulons implémenter dans notre application :
   # En tant qu’utilisateur, je peux voir toutes mes listes de films.
   # En tant qu’utilisateur, je peux créer une liste de films.

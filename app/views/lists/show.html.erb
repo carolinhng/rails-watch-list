@@ -2,7 +2,7 @@
 
 
 <button><%= link_to "Add a movie", new_list_bookmark_path(@list) %></button>
-
+<button><%= link_to "Back to lists", lists_path %></button>
 <div class="container">
   <div class="cards">
     <% @list.bookmarks.each do | bookmark |  %>

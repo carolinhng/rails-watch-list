@@ -1,7 +1,7 @@
 <h1>Add a movie #new</h1>
 
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
+<%= simple_form_for ([@list, @bookmark]) do |f| %>
   <%= f.input :movie_id, collection: Movie.all %>
   <%= f.input :comment%>
   <%= f.submit %>
