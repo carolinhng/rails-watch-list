@@ -21,12 +21,15 @@
   justify-content: center;
 }
 
-.margin-top-bottom {
+.margin-top {
   margin-top: 20px;
-  margin-bottom: 100px;
 }
 
-.container-button-title  {
+.margin-bottom {
+  margin-bottom: 140px;
+}
+
+.container-space-between  {
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
@@ -34,4 +37,16 @@
     a {
       padding-top: 10px;;
     }
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.padding-top-20 {
+  padding-top: 10px;
+}
+
+.border-radius-0 {
+  border: 0px;
 }

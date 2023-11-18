@@ -1,8 +1,12 @@
-<h1>Add a movie #new</h1>
+<div class="container margin-top margin-bottom padding-top-10">
+  <h1>Add a movie</h1>
 
 
-<%= simple_form_for ([@list, @bookmark]) do |f| %>
-  <%= f.input :movie_id, collection: Movie.all %>
-  <%= f.input :comment%>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for ([@list, @bookmark]) do |f| %>
+    <%= f.input :movie_id, collection: Movie.all %>
+    <%= f.input :comment%>
+    <%= f.submit class: "btn-ghost border-radius-0" %>
+  <% end %>
+
+
+</div>

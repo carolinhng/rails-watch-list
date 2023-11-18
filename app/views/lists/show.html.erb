@@ -1,14 +1,15 @@
-
-<div class="container">
-  <h1><%= @list.name %></h1>
-  <div>
+<div class="container margin-top">
+  <div class="container-space-between">
+    <h1><%= @list.name %></h1>
+    <div>
     <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-ghost" %>
     <%= link_to "Back to lists", lists_path, class: "btn btn-ghost" %>
+    </div>
   </div>
 </div>
 
 
-<div class="container">
+<div class="container margin-bottom">
   <div class="cards">
     <% @list.bookmarks.each do | bookmark |  %>
       <div class="card-trip">
@@ -16,9 +17,13 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= bookmark.movie.title %></h2>
-            <p><%= bookmark.movie.overview %></p>
-            <p><strong><%= bookmark.comment %></strong>
-             <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <p class="padding-top-10"><%= bookmark.movie.overview %></p>
+              <div class="comment padding-top-20">
+                <p>Comment : <%= bookmark.comment %>
+              </div>
+              <div class="link-delete padding-top-20">
+                <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              </div>
           </div>
         </div>
       </div>
