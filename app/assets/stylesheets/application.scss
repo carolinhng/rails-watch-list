@@ -20,3 +20,18 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.margin-top-bottom {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.container-button-title  {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+
+    a {
+      padding-top: 10px;;
+    }
+}

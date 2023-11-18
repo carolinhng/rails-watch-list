@@ -12,9 +12,9 @@
 
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://t3.ftcdn.net/jpg/05/90/75/40/360_F_590754013_CoFRYEcAmLREfB3k8vjzuyStsDbMAnqC.jpg" />
-  </a>
+      <%= link_to lists_path do %>
+        <img src="https://t3.ftcdn.net/jpg/05/90/75/40/360_F_590754013_CoFRYEcAmLREfB3k8vjzuyStsDbMAnqC.jpg" width= "60px" />
+      <% end%>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,27 +22,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">New list</a>
+              <%= link_to "New list", new_list_path, class: "nav-link"%></button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My list</a>
+              <%= link_to "My list", lists_path, class: "nav-link"%></button>
             </li>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-              </div>
-            </li>
-            <!--li class="nav-item"-->
-            <!--/li-->
         </ul>
       </div>
     </div>
   </div>
 
-
-
   <body>
     <%= yield %>
   </body>
+
+  <div class="footer">
+    <div class="footer-copyright">
+      Movies <i class="fas fa-heart"></i>
+    </div>
+  </div>
 </html>
